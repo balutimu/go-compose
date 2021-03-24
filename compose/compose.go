@@ -146,7 +146,7 @@ func composeStart(fName string, forcePull, rmFirst bool) ([]string, error) {
 	if err != nil {
 		return nil, fmt.Errorf("compose: error starting containers: %v", err)
 	}
-	logger.Prinltn(out)
+	logger.Println(out)
 	logger.Println("containers started")
 
 	matches := composeUpRegexp.FindAllStringSubmatch(out, -1)
